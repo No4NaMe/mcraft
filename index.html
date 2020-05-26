@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="interkassa-verification" content="3fd845ec56db4924176cdaa67cff3024" />
+    <meta name="robots" content="all">
+    <meta name="author" content="webmcpe">
+    <meta name="description" content="MegaMine - это сервер Minecraft Pocket Edition">
+    <meta name="keywords" content="megamine, megaminepe, донат, купить донат, майнкрафт сервер, майнкрафт пе сервер, mcpe, pocket edition, игровой сервер, скачать minecraft pe, сервер mcraft, pe.megamine.ru, megamine.ru, игровой сервер, minecraft, автодонат, играть mcpe, мониторинг mcpe, сервера майнкрафт пе">
+    <title><?php echo $config['main']['site_name']; ?></title>
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/png">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/jquery.formstyler.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <script src="./assets/js/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/megamine.js"></script>
+    <script src="./assets/js/jquery.copy-to-clipboard.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/snow.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.openPopup').on('click',function(){
+        var dataURL = $(this).attr('data-toggle');
+        $('.modal-body').load(dataURL,function(){
+            $('#myModal').modal({show:true});
+        });
+    }); 
+});
+</script>
+<script>
+$('.openBtn').on('click',function()
+{
+    $('.modal-body').load('page.php?mod=page&id=1','page.php?mod=page&id=2','page.php?mod=page&id=3','page.php?mod=page&id=4','page.php?mod=page&id=5','page.php?mod=page&id=6',function(){
+        $('#myModal').modal({show:true});
+    });
+});
+</script>
+	<script type="text/javascript">
+	var servers = parseInt('<?=count($config['servers']);?>');
+	var serverID = 0;
+
+	function selectServer(servID)
+	{
+		$('.server-select').hide(400);
+		$('#server' + servID).show(400);
+		serverID = servID;
+	}
+	function selectMenu()
+	{
+		$('#server' + serverID).hide(400);
+		$('.server-select').show(400);
+	}
+	$(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        <!-- Раскоментировать для двух и более серверов -->
+        <!-- $('select').styler(); -->
+
+        $('form.server').validator();
+
+		if (servers === 1)
+		{
+			$('#selectMenu').hide(400);
+			$('#server0').show(400);
+		}
+		else
+		{
+			$('.server-select').show(400);
+		}
+	});
+	</script>
+</head>
+
+<body>
+    <div class="sidenav" id="sidenav_mobile">
+        <img src="./assets/img/close.svg" id="sidenav_mobile_close">
+                    <?=$data['links']['header'];?>
+<a href="#modal_contacts" data-toggle="modal">Контакты</a>
+    </div>
+
+    <div class="header">
+        <div class="navbar-light navbar-expand-lg2">
+        <div class="container">
+            <div class="header-content d-block d-lg-flex align-items-center">
+                <div class="block3D d-inline-block d-lg-none d-xl-none openMenu" id="sidenav_mobile_toggle"><img src="./assets/img/menu.svg">
+                </div>
+                <a href="/">
+                    <img class="logo d-none d-lg-inline d-md-none" src="./assets/img/logo.png">
+                    <img class="logo d-inline d-lg-none d-md-inline" src="./assets/img/logo-m.png">
+                </a>
+                <span class="menu d-none d-lg-inline d-md-none">
+                    <?=$data['links']['header'];?>
+                <!-- <a href="#modal_advert" data-toggle="modal">Обьявление</a> -->
+<a href="#modal_contacts" data-toggle="modal">Контакты</a>
+<!-- <a href="#myModal" data-toggle="page.php?mod=page&id=5" class="openPopup">Страница</a> -->
+                </span>
+                    <button class="start_game block3D d-none d-lg-inline-block" data-toggle="modal" data-target="#modal_start_game">Начать играть</button>
+                    <button class="start_game_mobile block3D d-block d-lg-none" data-toggle="modal" data-target="#modal_start_game">
+                        <div class="img block3D"><img src="./assets/img/play.svg"></div>
+                        Начать играть
+                    </button>
+                            </div>
+        </div>
+        </div>
+    </div>
+    <div id="notifications">
+        <div class="container">
+
+                    </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" id="modal_contacts">
+        <div class="modal-dialog">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="modal-content contacts_modal">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <img src="./assets/img/close.svg">
+                            </button>
+                            <div class="row justify-content-center">
+                                <div class="col-11 col-lg-10">
+                                    <h1>Контакты</h1>
+                                    <div class="steps row">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="step">
+                                                <div class="img vk"><img src="./assets/img/vk.svg"></div>
+                                                <span>
+                                                <p>Быстро ответим</p>
+                                                <a href="//vk.me/megam1ne">ВКонтакте</a>
+                                            </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="step">
+                                                <div class="img mail"><img src="./assets/img/mail.svg"></div>
+                                                <span>
+                                                <p>Пишите нам на</p>
+                                                <a href="mailto:admin@megamine.ru">admin@megamine.ru</a>
+                                            </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="modal-content" id="result">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <img src="./assets/img/close.svg">
+                            </button>
+                            <div class="row justify-content-center">
+                                <div class="col-11 col-lg-10">
+                                    <div class="steps row">
+                                        <div class="col-12 col-lg-12">
+                                            <div class="step modal-body">
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-2" id="modal_advert">
+        <div class="modal-dialog">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="modal-content contacts_modal">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <img src="./assets/img/close.svg">
+                            </button>
+                            <div class="row justify-content-center">
+                                <div class="col-11 col-lg-10">
+                                    <h1>Обьявление</h1>
+
+                                    <div class="steps row">
+                                        <div class="col-12 col-lg-12">
+                                            <div class="step">
+<?=($data['hideAdvert'] === true) ? false : $data['advert'];?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" id="modal_start_game">
+        <div class="modal-dialog">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="modal-content start_game_modal">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <img src="./assets/img/close.svg">
+                            </button>
+                            <div class="row justify-content-center">
+                                <div class="col-11 col-lg-10">
+                                    <h1>Как начать играть?</h1>
+                                    <div class="add_server">
+                                        <button onclick="window.location.href = 'minecraft://?addExternalServer=« §cMega§bMine§r§f »|pe.megamine.ru:19132';">Добавить сервер</button>
+                                        <span>Сервер добавится в автоматическом режиме</span>
+                                    </div>
+                                    <b class="add_manual">Добавление вручную</b>
+                                    <div class="steps">
+                                        <div class="step">Зайдите в Minecraft Pocket Edition</div>
+                                        <div class="step">Нажмите кнопку “Играть”</div>
+                                        <div class="step">Нажмите кнопку “Серверы”, а затем “Добавить сервер”</div>
+                                        <div class="step no-flex">
+                                            <span>Заполните форму, как показано на фотографии</span>
+                                            <div><img src="./assets/img/how_play.png" style="width: 80%;"></div>
+                                        </div>
+                                        <div class="step">Нажмите кнопку “Сохранить” и выберите сервер в списке серверов</div>
+                                        <div class="step">Готово! Удачной игры!</div>
+                                    </div>
+                                    <div class="ip clearfix">
+                                        <button class="grey">IP: pe.megamine.ru | Порт: 19132</button>
+                                        <button class="dark" id="copy" data-clipboard-text="pe.megamine.ru:19132"><img src="./assets/img/copy.svg"></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer">
+                                <button type="button" data-dismiss="modal">Я разобрался</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container indexPage">
+    <div class="row">
+        <div class="col-12 col-lg-7 mainBlock">
+<?php echo MessageShow(); ?>
+<?=$data['content'];?>
+            <div class="block block3D">
+                <div class="content users">
+<?=$data['lastBuyers'];?>                                    
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .header .start_game.block3D {
+        display: inline-block;
+    }
+    .alert-discount {
+        background-color: #1c212a;
+        box-shadow: 0px 20px 45px 0 rgba(24, 28, 37, 0.15);
+        color: #ffff;
+        border: none;
+        border-radius: 0;
+    }
+</style>
+    <footer>
+
+        <center>2019-2020 &copy; (MCraft) | <?=$data['links']['footer'];?></center>
+<center><!-- begin WebMoney Transfer : accept label -->
+<a href="https://www.megastock.com/" target="_blank"><img src="/assets/img/88x31_wm_blue.png" alt="www.megastock.com" border="0"/></a>
+<!-- end WebMoney Transfer : accept label -->	
+<!-- begin WebMoney Transfer : attestation label --> <a href="https://passport.web.money/asp/certview.asp?wmid=468961531157" target=_blank><IMG SRC="/assets/img/v_white_on_transp_ru.png" title="Здесь находится аттестат нашего WM идентификатора 468961531157" border="0"></a> 
+<!-- end WebMoney Transfer : attestation label --></center>
+<center style="visibility: hidden;"><!--LiveInternet counter--><script type="text/javascript">
+document.write('<a href="//www.liveinternet.ru/click" '+
+'target="_blank"><img src="//counter.yadro.ru/hit?t14.6;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+';h'+escape(document.title.substring(0,150))+';'+Math.random()+
+'" alt="" title="LiveInternet: показано число просмотров за 24'+
+' часа, посетителей за 24 часа и за сегодня" '+
+'border="0" width="88" height="31"><\/a>')
+</script><!--/LiveInternet--></center>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(57662461, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/57662461" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </footer><br>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+/*.server-select {
+    display: none;
+}
+
+.server {
+    display: none;
+}*/
+
+select {
+    width: 100%;
+}
+
+.jq-selectbox {
+    width: 100%;
+    display: block;
+}
+
+.jq-selectbox__dropdown ul {
+    max-height: 203px;
+}
+
+
+.alert {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999999;
+    border-radius: 0;
+    height: 95%;
+}
+
+#monit .dropdown-menu form {
+    padding: 10px;
+    min-width: 200px;
+}
+
+#monit .serv {
+    border-bottom: 1px dashed #C3C3C3;
+    margin-bottom: 5px;
+}
+
+#monit .serv .online {
+    float: right;
+}
+
+.buy:first-of-type {
+    padding-right: 0;
+}
+
+.buy:last-of-type {
+    padding-left: 0;
+}
+
+textarea {
+    resize: vertical !important;
+}
+
+.form-group textarea {
+    resize: vertical !important;
+}
+
+.server-select button .progress {
+    left: 1.5rem;
+    position: absolute;
+    height: 6px;
+    width: calc(100% - 30px);
+}
