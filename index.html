@@ -79,7 +79,7 @@
                                                 <div class="img vk"><img src="/img/vk.svg"></div>
                                                 <span>
                                                 <p>Быстро ответим</p>
-                                                <a href="//vk.me/megam1ne">ВКонтакте</a>
+                                                <a href="//vk.me/mcraft_pw">ВКонтакте</a>
                                             </span>
                                             </div>
                                         </div>
@@ -88,70 +88,8 @@
                                                 <div class="img mail"><img src="/img/mail.svg"></div>
                                                 <span>
                                                 <p>Пишите нам на</p>
-                                                <a href="mailto:admin@megamine.ru">admin@megamine.ru</a>
+                                                <a href="mailto:admin@mcraft.pw">admin@mcraft.pw</a>
                                             </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" id="myModal">
-        <div class="modal-dialog">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-12 col-lg-10">
-                        <div class="modal-content" id="result">
-                            <button type="button" class="close" data-dismiss="modal">
-                                <img src="/img/close.svg">
-                            </button>
-                            <div class="row justify-content-center">
-                                <div class="col-11 col-lg-10">
-                                    <div class="steps row">
-                                        <div class="col-12 col-lg-12">
-                                            <div class="step modal-body">
-                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade bd-example-modal-lg" tabindex="-2" id="modal_advert">
-        <div class="modal-dialog">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-12 col-lg-10">
-                        <div class="modal-content contacts_modal">
-                            <button type="button" class="close" data-dismiss="modal">
-                                <img src="/img/close.svg">
-                            </button>
-                            <div class="row justify-content-center">
-                                <div class="col-11 col-lg-10">
-                                    <h1>Обьявление</h1>
-
-                                    <div class="steps row">
-                                        <div class="col-12 col-lg-12">
-                                            <div class="step">
-<div class="user block3D align-items-center">
-<img src="face.php/?name=<?=$data['buyer']['username'];?>" alt="<?=$data['buyer']['username'];?>" class="logo">
-<div class="tick"><img src="/img/tick.svg"></div>
-<div class="info">
-<b><?=$data['buyer']['username'];?></b>
-<p>Купил <span><?=$data['name'];?></span></p>
-<p><?=date(' d.m в H:i', $data['buyer']['time']);?></p>
-</div>
-</div>
                                             </div>
                                         </div>
                                     </div>
@@ -170,13 +108,13 @@
                     <div class="col-12 col-lg-10">
                         <div class="modal-content start_game_modal">
                             <button type="button" class="close" data-dismiss="modal">
-                                <img src="/img/close.svg">
+                                <img src="/templates/styles/img/close.svg">
                             </button>
                             <div class="row justify-content-center">
                                 <div class="col-11 col-lg-10">
                                     <h1>Как начать играть?</h1>
                                     <div class="add_server">
-                                        <button onclick="window.location.href = 'minecraft://?addExternalServer=« §cMega§bMine§r§f »|pe.megamine.ru:19132';">Добавить сервер</button>
+                                        <button onclick="window.location.href = 'minecraft://?addExternalServer=« §l§bVine§cMine§r§f »|pe.VineMine.net:19132';">Добавить сервер</button>
                                         <span>Сервер добавится в автоматическом режиме</span>
                                     </div>
                                     <b class="add_manual">Добавление вручную</b>
@@ -186,14 +124,14 @@
                                         <div class="step">Нажмите кнопку “Серверы”, а затем “Добавить сервер”</div>
                                         <div class="step no-flex">
                                             <span>Заполните форму, как показано на фотографии</span>
-                                            <div><img src="/img/how_play.png" style="width: 80%;"></div>
+                                            <div><img src="/templates/styles/img/how_play.jpg" style="width: 80%;"></div>
                                         </div>
                                         <div class="step">Нажмите кнопку “Сохранить” и выберите сервер в списке серверов</div>
                                         <div class="step">Готово! Удачной игры!</div>
                                     </div>
                                     <div class="ip clearfix">
-                                        <button class="grey">IP: pe.megamine.ru | Порт: 19132</button>
-                                        <button class="dark" id="copy" data-clipboard-text="pe.megamine.ru:19132"><img src="./assets/img/copy.svg"></button>
+                                        <button class="grey">IP: pe.vinemine.net | Порт: 19132</button>
+                                        <button class="dark"><img src="/templates/styles/img/copy.svg"></button>
                                     </div>
                                 </div>
                             </div>
@@ -210,437 +148,219 @@
     <div class="container indexPage">
     <div class="row">
         <div class="col-12 col-lg-7 mainBlock">
-<?php echo MessageShow(); ?>
-<form action="payment.php" method="POST" id="server<?=$data['i'];?>" class="block row justify-content-center" data-toggle="validator" data-delay="200"  autocomplete="off">
-<div class="content">
-<h1>Покупка доната</h1>
-<!-- Раскоментировать для двух и более серверов. Добавить в форму выше стиль style="display: none;"-->
-<!-- <p id="selectMenu">
-<button type="button" onclick="selectMenu();" class="red">
-<i class="icon arrow-left"></i> Вернуться к выбору сервера
-</button>
-</p>-->
-<input type="text" id="username" name="username" placeholder="Никнейм" pattern="^<?=U_REGEXP;?>$" maxlength="20" minlength="3" required>
-<select id="selid" name="selid" required>
-<option selected disabled>Выберите товар</option>
-<?=$data['goods'];?>
-</select>
-<input type="hidden" name="server" value="<?=$data['i'];?>">
-<select style="display: none;" id="merchant" name="merchant">
-<?=$data['merchants'];?>
-</select>
-</div>
-<div class="footer row justify-content-center">
-<div class="content">
-<button class="red" type="submit" name="dosubm">КУПИТЬ</button>
-<div class="text">Нажимая на кнопку, вы соглашаетесь
-<br>с <a href="/rules" target="_blank">правилами сервера</a></div><br>
-</div>
-</div>
-</form>
-            
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#1" aria-expanded="true" aria-controls="1">
-Флай — 9<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="1" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/afk</span> — режим вдали от клавиатуры</li>
-<li><span style="color:white;">/kit fly</span> — набор Флая</li>
-<li><span style="color:white;">/fly</span> — режим полета</li>
-<li><span style="color:white;">/clear</span> — очистить инвентарь</li>
-<li>Префикс <b style="color:#30d3ff;">[ФЛАЙ]</b> в чате и над головой</li>
-<li>вход на полный сервер</li>
-<li>доступ к донат чату</li>
-<li>2 региона, по 2500 блоков.</li>
-<li>+ Возможности: Игрок</li>
-</ul>
-</div>
-</div>
-<!-- Конец описания привилегии -->
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#2" aria-expanded="true" aria-controls="2">
-Вип — 29<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="2" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/clo /cos</span> — Вип одежда</li>
-<li><span style="color:white;">/heal</span> — вылечить себя</li>
-<li><span style="color:white;">/kit vip</span> — получить вип набор</li>
-<li><span style="color:white;">/back</span> — вернуться на место смерти</li>
-<li>Префикс <b style="color:#30d3ff;">[ВИП]</b> в чате и над головой</li>
-<li>3 региона, по 2500 блоков.</li>
-<li>+ Возможности: Игрок, Флай</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#3" aria-expanded="true" aria-controls="3">
-Премиум — 49<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="3" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/god</span> — режим бога</li>
-<li><span style="color:white;">/repair</span> — бесплатная починка предмета в руке</li>
-<li><span style="color:white;">/ptime</span> — изменить время для себя</li>
-<li><span style="color:white;">/kit premium</span> — получить премиум набор</li>
-<li>Префикс <b style="color:#ff3088;">[ПРЕМИУМ]</b> в чате и над головой</li>
-<li>4 региона, по 2500 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#4" aria-expanded="true" aria-controls="4">
-Креатив — 99<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="4" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/gm</span> — смена игрового режима (креатив/выживание)</li>
-<li><span style="color:white;">/top</span> — телепорт в облака</li>
-<li>Префикс <b style="color:#ff3088;">[КРЕАТИВ]</b> в чате и над головой</li>
-<li>5 регионов, по 2800 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип, Премиум</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#5" aria-expanded="true" aria-controls="5">
-Лорд — 149<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="5" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/seemoney</span> — смотреть деньги другого игрока</li>
-<li><span style="color:white;">/size</span> — изменить размер своего скина</li>
-<li><span style="color:white;">/extinguish</span> — потушиться</li>
-<li>Префикс <b style="color:#ff3088;">[ЛОРД]</b> в чате и над головой</li>
-<li>5 регионов, по 3000 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#6" aria-expanded="true" aria-controls="6">
-Ультра — 199<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="6" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/near</span> — список игроков рядом с вами</li>
-<li><span style="color:white;">/hat</span> — получить супер шляпу</li>
-<li><span style="color:white;">/playerhead</span> — получить свою голову</li>
-<li>Префикс <b style="color:#ff3088;">[УЛЬТРА]</b> в чате и над головой</li>
-<li>6 регионов, по 3000 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#7" aria-expanded="true" aria-controls="7">
-Хелпер — 249<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="7" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/kick</span> — кикнуть игрока</li>
-<li><span style="color:white;">/tp</span> — телепорт к игроку</li>
-<li><span style="color:white;">/time</span> — управление временем</li>
-<li>Префикс <b style="color:#3dff30;">[ХЕЛПЕР]</b> в чате и над головой</li>
-<li>6 регионов, по 3200 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#8" aria-expanded="true" aria-controls="8">
-Модератор — 349<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="8" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/heal</span> — вылечить другого игрока</li>
-<li><span style="color:white;">/clo</span> — надеть крылья</li>
-<li><span style="color:white;">/clearchat</span> — очистка чата</li>
-<li><span style="color:white;">/mufflechat</span> — блокировка чата игрока</li>
-<li><span style="color:white;">/unmuffle</span> — снятие блокировки чата у игрока</li>
-<li><span style="color:white;">/jail</span> — посадить игрока</li>
-<li><span style="color:white;">/unjail</span> — выпустить игрока</li>
-<li>Префикс <b style="color:#ffb130;">[МОДЕРАТОР]</b> в чате и над головой</li>
-<li>7 регионов, по 3200 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#9" aria-expanded="true" aria-controls="9">
-Админ — 449<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="9" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/clan</span> — Возможность создавать кланы</li>
-<li><span style="color:white;">/warn</span> — выдать предупреждение</li>
-<li><span style="color:white;">/ban</span> — блокировка игрока</li>
-<li><span style="color:white;">/pardon</span> — разбан игрока</li>
-<li>Префикс <b style="color:#ffb130;">[АДМИН]</b> в чате и над головой</li>
-<li>7 регионов, по 3500 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#10" aria-expanded="true" aria-controls="10">
-Оператор — 599<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="10" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/playerhead</span> — получить голову другого игрока</li>
-<li><span style="color:white;">/v</span> — режим невидимости</li>
-<li><span style="color:white;">/say</span> — написать сообщение на весь сервер</li>
-<li>Префикс <b style="color:#3dff30;">[ОПЕРАТОР]</b> в чате и над головой</li>
-<li>7 регионов, по 4000 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор, Админ</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#11" aria-expanded="true" aria-controls="11">
-Анти-Грифер — 899<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="11" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/near</span> — просмотр игроков рядом с другим игроком</li>
-<li><span style="color:white;">/whois</span> — узнать информацию об игроке</li>
-<li><span style="color:white;">/burn</span> — поджечь игрока</li>
-<li><span style="color:white;">//pos1, //pos2, //set</span> — изменение местности</li>
-<li><span style="color:white;">/setprefix</span> — поменять себе [Префикс]</li>
-<li><span style="color:white;">/rg</span> — Полный доступ к приватам</li>
-<li>Префикс <b style="color:#3dff30;">[АНТИ-ГРИФЕР]</b> в чате и над головой</li>
-<li>8 регионов, по 4000 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор, Админ, Оператор</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#12" aria-expanded="true" aria-controls="12">
-Консоль — 1199<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="12" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li>слежка за вводом команд игроков и все что происходит в консоли</li>
-<li>Префикс <b style="color:#3dff30;">[КОНСОЛЬ]</b> в чате и над головой</li>
-<li>8 регионов, по 4500 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор, Админ, Оператор, Анти-Грифер</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#13" aria-expanded="true" aria-controls="13">
-Бог — 1699<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="13" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/fly</span> — выдать режим флая</li>
-<li>Префикс <b style="color:#3dff30;">[БОГ]</b> в чате и над головой</li>
-<li>8 регионов, по 5000 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор, Админ, Оператор, Анти-Грифер, Консоль</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#14" aria-expanded="true" aria-controls="14">
-Властелин — 2499<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="14" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/lightning</span> — ударить игрока молнией</li>
-<li><span style="color:white;">/seen</span> — Посмотреть последнее сыгранное время игрока</li>
-<li><span style="color:white;">/spawn</span> — отправить игрока на спавн</li>
-<li>Префикс <b style="color:#ff30f9;">[ВЛАСТЕЛИН]</b> в чате и над головой</li>
-<li>8 регионов, по 6000 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор, Админ, Оператор, Анти-Грифер, Консоль, Бог</li>
-</ul>
-</div>
-</div>
-
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#15" aria-expanded="true" aria-controls="15">
-Спонсор — 3999<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="15" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li>Префикс <b style="color:red;">[СПОНСОР]</b> в чате и над головой</li>
-<li><span style="color:white;">/lc</span> — выдать режим бога</li>
-<li><span style="color:white;">/god</span> — выдать режим бога</li>
-<li>9 регионов, по 10 000 блоков.</li>
-<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор, Админ, Оператор, Анти-Грифер, Консоль, Бог, Властелин</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#16" aria-expanded="true" aria-controls="16">
-1 Донат-Кейс — 59<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="16" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/warp case</span> — Открыть донат кейс</li>
-<li>из кейса может выпасть:</li>
-<li>флай</li>
-<li>вип</li>
-<li>премиум</li>
-<li>креатив</li>
-<li>лорд</li>
-<li>ультра</li>
-<li>хелпер</li>
-<li>модератор</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#17" aria-expanded="true" aria-controls="17">
-2 Донат-Кейса — 99<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="17" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/warp case</span> — Открыть донат кейс</li>
-<li>из кейса может выпасть:</li>
-<li>флай</li>
-<li>вип</li>
-<li>премиум</li>
-<li>креатив</li>
-<li>лорд</li>
-<li>ультра</li>
-<li>хелпер</li>
-<li>модератор</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#18" aria-expanded="true" aria-controls="18">
-3 Донат-Кейса — 149<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="18" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/warp case</span> — Открыть донат кейс</li>
-<li>из кейса может выпасть:</li>
-<li>флай</li>
-<li>вип</li>
-<li>премиум</li>
-<li>креатив</li>
-<li>лорд</li>
-<li>ультра</li>
-<li>хелпер</li>
-<li>модератор</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#19" aria-expanded="true" aria-controls="19">
-4 Донат-Кейса — 199<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="19" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/warp case</span> — Открыть донат кейс</li>
-<li>из кейса может выпасть:</li>
-<li>флай</li>
-<li>вип</li>
-<li>премиум</li>
-<li>креатив</li>
-<li>лорд</li>
-<li>ультра</li>
-<li>хелпер</li>
-<li>модератор</li>
-</ul>
-</div>
-</div>
-
-<div class="card">
-<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#20" aria-expanded="true" aria-controls="20">
-5 Донат-Кейсов — 249<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
-</button>
-<div id="20" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-<ul>
-<li><span style="color:white;">/warp case</span> — Открыть донат кейс</li>
-<li>из кейса может выпасть:</li>
-<li>флай</li>
-<li>вип</li>
-<li>премиум</li>
-<li>креатив</li>
-<li>лорд</li>
-<li>ультра</li>
-<li>хелпер</li>
-<li>модератор</li>
-</ul>
-</div>
-</div>
-
-
-</div>
-</div>
-</div>
-</div>
-<!-- block monitoring -->
-<div class="col-12 col-lg-5 rightBlock">
-<div class="block block3D">
-<h1>Мониторинг сервера</h1>
-<div class="content">
-<?php for ($i = 0; $i < count($config['servers']); $i++) { ?>
-<div class="server block3D align-items-center">
-<img class="logo" src="./assets/img/logo.png">
-<div class="info">
-<b id="ip"><?php echo $config['servers'][$i]['host']; ?>:<?php echo $config['servers'][$i]['port']; ?></b>
-<?php if (isset($config['servers'][$i]['showMonitoring']) && $config['servers'][$i]['showMonitoring'] === true) { ?> Сейчас  играет 
-<?php
-$str = file_get_contents ('https://megamine.ru/api.php?ip='.$config['servers'][$i]['host'].'&port='.$config['servers'][$i]['port'].'');
-$playersonline = json_decode( $str );
-echo "<span>";
-echo $playersonline->players->now;
-echo "</span> игроков";
-?>
-<?
-$fp = @fsockopen ("".$config['servers'][$i]['host']."","".$config['servers'][$i]['port']."",$errno,$errstr,1);
-if ($fp)
-echo "<p style='color:green;'>ВКЛЮЧЁН</p>";
-else
-echo "<p style='color:red;'>ВЫКЛЮЧЕН</p>"; 
-?>
-<?php } ?>
-</div>
-</div>
-<div class="buttons">
-<button onclick="window.location.href = 'minecraft://?addExternalServer=« §l§bM§cCraft§r§f »|<?php echo $config['servers'][$i]['host']; ?>:<?php echo $config['servers'][$i]['port']; ?>';">Добавить сервер</button>
-<button class="dark" id="copy" data-clipboard-text="<?php echo $config['servers'][$i]['host']; ?>:<?php echo $config['servers'][$i]['port']; ?>"><img src="./assets/img/copy.svg"></button>
-</div>
-<?php } ?>
-</div>
-</div>
-<!-- end block monitoring -->
+111
+            <div class="block row justify-content-center" id="description">
+                <div class="content">
+                    <h1>Описание привилегий</h1>
+                    <div class="accordion">
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#4" aria-expanded="true" aria-controls="4">
+                                Флай — 9 рублей
+                            </button>
+                            <div id="4" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Префикс [Флай] в чате и над головой<br>* Возможность создать 2 привата по 1000 блоков<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#1" aria-expanded="true" aria-controls="1">
+                                Вип — 29 рублей
+                            </button>
+                            <div id="1" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Префикс [Вип] в чате и над головой<br>* Возможность создать 2 привата по 1100 блоков<br>* Сохранение инвентаря после смерти с шансом в 50%<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#3" aria-expanded="true" aria-controls="3">
+                                Премиум — 49 рублей
+                            </button>
+                            <div id="3" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /god - режим бога<br>* /repair - бесплатная починка предмета в руке<br>* /ptime - изменить время для себя<br>* /premium - получить премиум набор<br>* /clear - очистить свой инвентарь<br>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Префикс [Премиум] в чате и над головой<br>* Возможность создать 2 привата по 1200 блоков.<br>* Вход на заполненный сервер<br>* Сохранение вещей после смерти с шансом в 50%<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#7" aria-expanded="true" aria-controls="7">
+                                Креатив — 99 рублей
+                            </button>
+                            <div id="7" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /gm - смена игрового режима (креатив/выживание)<br>* /top - телепорт в облака<br>* /god - режим бога<br>* /repair - бесплатная починка предмета в руке<br>* /ptime - изменить время для себя<br>* /premium - получить премиум набор<br>* /clear - очистить свой инвентарь<br>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Префикс [Креатив] в чате и над головой<br>* Возможность создать 3 привата по 1300 блоков.<br>* Вход на заполненный сервер<br>* Сохранение вещей после смерти с шансом в 50%<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#34" aria-expanded="true" aria-controls="34">
+                                Лорд — 149 рублей
+                            </button>
+                            <div id="34" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /seemoney - смотреть деньги другого игрока<br>* /size - изменить размер своего скина<br>* /top - телепорт в облака<br>* /gm - смена игрового режима (креатив/выживание)<br>* /god - режим бога<br>* /repair - бесплатная починка предмета в руке<br>* /ptime - изменить время для себя<br>* /premium - получить премиум набор<br>* /clear - очистить свой инвентарь<br>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Префикс [Лорд] в чате и над головой<br>* Возможность создать 3 привата по 1500 блоков.<br>* Вход на заполненный сервер<br>* Сохранение вещей после смерти с шансом в 50%<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#9" aria-expanded="true" aria-controls="9">
+                                Ультра — 199 рублей
+                            </button>
+                            <div id="9" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /near - список игроков рядом с вами<br>* /skull - получить свою голову<br>* /lagg - очистить весь дроп<br>* /seemoney - смотреть деньги другого игрока<br>* /size - изменить размер своего скина<br>* /top - телепорт в облака<br>* /gm - смена игрового режима (креатив/выживание)<br>* /god - режим бога<br>* /repair - бесплатная починка предмета в руке<br>* /ptime - изменить время для себя<br>* /premium - получить премиум набор<br>* /clear - очистить свой инвентарь<br>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Префикс [Ультра] в чате и над головой<br>* Возможность создать 3 привата по 1700 блоков.<br>* Вход на заполненный сервер<br>* Сохранение вещей после смерти с шансом в 50%<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#10" aria-expanded="true" aria-controls="10">
+                                Хелпер — 249 рублей
+                            </button>
+                            <div id="10" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /kick - кикнуть игрока<br>* /tp - телепорт к игроку<br>* /time - управление временем<br>* /near - список игроков рядом с вами<br>* /skull - получить свою голову<br>* /lagg - очистить весь дроп<br>* /seemoney - смотреть деньги другого игрока<br>* /size - изменить размер своего скина<br>* /top - телепорт в облака<br>* /gm - смена игрового режима (креатив/выживание)<br>* /god - режим бога<br>* /repair - бесплатная починка предмета в руке<br>* /ptime - изменить время для себя<br>* /premium - получить премиум набор<br>* /clear - очистить свой инвентарь<br>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Префикс [Хелпер] в чате и над головой<br>* Возможность создать 3 привата по 2000 блоков.<br>* Вход на заполненный сервер<br>* Сохранение вещей после смерти с шансом в 50%<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#11" aria-expanded="true" aria-controls="11">
+                                Модератор — 349 рублей
+                            </button>
+                            <div id="11" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /heal - вылечить другого игрока<br>* /cape - надеть плащ<br>* /clearchat - очистка чата<br>* /mute - блокировка чата игрока<br>* /unmute - снятие блокировки чата у игрока<br>* /jail - посадить игрока<br>* /unjail - выпустить игрока<br>* /kick - кикнуть игрока<br>* /tp - телепорт к игроку<br>* /time - управление временем<br>* /near - список игроков рядом с вами<br>* /skull - получить свою голову<br>* /lagg - очистить весь дроп<br>* /seemoney - смотреть деньги другого игрока<br>* /size - изменить размер своего скина<br>* /top - телепорт в облака<br>* /gm - смена игрового режима (креатив/выживание)<br>* /god - режим бога<br>* /repair - бесплатная починка предмета в руке<br>* /ptime - изменить время для себя<br>* /premium - получить премиум набор<br>* /clear - очистить свой инвентарь<br>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Префикс [Модератор] в чате и над головой<br>* Возможность создать 3 привата по 2200 блоков.<br>* Вход на заполненный сервер<br>* Сохранение вещей после смерти с шансом в 50%<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#13" aria-expanded="true" aria-controls="13">
+                                Админ — 449 рублей
+                            </button>
+                            <div id="13" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /warn - выдать предупреждение<br>* /ban - блокировка игрока<br>* /pardon - разбан игрока<br>* /cape - надеть плащ<br>* /heal - вылечить другого игрока<br>* /clearchat - очистка чата<br>* /mute - блокировка чата игрока<br>* /unmute - снятие блокировки чата у игрока<br>* /jail - посадить игрока<br>* /unjail - выпустить игрока<br>* /kick - кикнуть игрока<br>* /tp - телепорт к игроку<br>* /time - управление временем<br>* /near - список игроков рядом с вами<br>* /skull - получить свою голову<br>* /lagg - очистить весь дроп<br>* /seemoney - смотреть деньги другого игрока<br>* /size - изменить размер своего скина<br>* /top - телепорт в облака<br>* /gm - смена игрового режима (креатив/выживание)<br>* /god - режим бога<br>* /repair - бесплатная починка предмета в руке<br>* /ptime - изменить время для себя<br>* /premium - получить премиум набор<br>* /clear - очистить свой инвентарь<br>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Префикс [Админ] в чате и над головой<br>* Возможность создать 3 привата по 2300 блоков.<br>* Вход на заполненный сервер<br>* Сохранение вещей после смерти с шансом в 50%<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#12" aria-expanded="true" aria-controls="12">
+                                Оператор — 599 рублей
+                            </button>
+                            <div id="12" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /pumpkin - надеть тыкву на голову<br>* /skull - получить голову другого игрока<br>* /v - режим невидимости<br>* /say - написать сообщение на весь сервер<br>* /warn - выдать предупреждение<br>* /heal - вылечить другого игрока<br>* /cape - надеть плащ<br>* /ban - блокировка игрока<br>* /pardon - разбан игрока<br>* /clearchat - очистка чата<br>* /mute - блокировка чата игрока<br>* /unmute - снятие блокировки чата у игрока<br>* /jail - посадить игрока<br>* /unjail - выпустить игрока<br>* /kick - кикнуть игрока<br>* /tp - телепорт к игроку<br>* /time - управление временем<br>* /near - список игроков рядом с вами<br>* /skull - получить свою голову<br>* /lagg - очистить весь дроп<br>* /seemoney - смотреть деньги другого игрока<br>* /size - изменить размер своего скина<br>* /top - телепорт в облака<br>* /gm - смена игрового режима (креатив/выживание)<br>* /god - режим бога<br>* /repair - бесплатная починка предмета в руке<br>* /ptime - изменить время для себя<br>* /premium - получить премиум набор<br>* /clear - очистить свой инвентарь<br>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Префикс [Оператор] в чате и над головой<br>* Возможность создать 4 привата по 2500 блоков.<br>* Вход на заполненный сервер<br>* Сохранение вещей после смерти с шансом в 50%<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#14" aria-expanded="true" aria-controls="14">
+                                Анти-Грифер — 899 рублей
+                            </button>
+                            <div id="14" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /nearby - просмотр игроков рядом с другим игроком<br>* /whois - узнать информацию об игроке<br>* /fire - поджечь игрока<br>* //pos1, //pos2, //set - изменение местности<br>* /prefix - поменять себе [Префикс]<br>* /ag - режим анти грифера (доступ к приватам)<br>* /warn - выдать предупреждение<br>* /heal - вылечить другого игрока<br>* /pumpkin - надеть тыкву на голову<br>* /cape - надеть плащ<br>* /skull - получить голову другого игрока<br>* /v - режим невидимости<br>* /say - написать сообщение на весь сервер<br>* /ban - блокировка игрока<br>* /pardon - разбан игрока<br>* /clearchat - очистка чата<br>* /mute - блокировка чата игрока<br>* /unmute - снятие блокировки чата у игрока<br>* /jail - посадить игрока<br>* /unjail - выпустить игрока<br>* /kick - кикнуть игрока<br>* /tp - телепорт к игроку<br>* /time - управление временем<br>* /near - список игроков рядом с вами<br>* /skull - получить свою голову<br>* /lagg - очистить весь дроп<br>* /seemoney - смотреть деньги другого игрока<br>* /size - изменить размер своего скина<br>* /top - телепорт в облака<br>* /gm - смена игрового режима (креатив/выживание)<br>* /god - режим бога<br>* /repair - бесплатная починка предмета в руке<br>* /ptime - изменить время для себя<br>* /premium - получить премиум набор<br>* /clear - очистить свой инвентарь<br>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Доступ к регионам других игроков<br>* Возможность создать 4 привата по 3000 блоков<br>* Префикс [Анти-Грифер] в чате и над головой<br>* Вход на заполненный сервер<br>* Сохранение вещей после смерти с шансом в 50%<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#15" aria-expanded="true" aria-controls="15">
+                                Консоль — 1199 рублей
+                            </button>
+                            <div id="15" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /console - слежка за вводом команд игроков<br>* /nearby - просмотр игроков рядом с другим игроком<br>* /whois - узнать информацию об игроке<br>* /fire - поджечь игрока<br>* //pos1, //pos2, //set - изменение местности<br>* /prefix - поменять себе [Префикс]<br>* /ag - режим анти грифера (доступ к приватам)<br>* /cape - надеть плащ<br>* /warn - выдать предупреждение<br>* /heal - вылечить другого игрока<br>* /vanishlist - посмотреть список игроков в режиме невидимости<br>* /pumpkin - надеть тыкву на голову<br>* /skull - получить голову другого игрока<br>* /v - режим невидимости<br>* /say - написать сообщение на весь сервер<br>* /ban - блокировка игрока<br>* /pardon - разбан игрока<br>* /clearchat - очистка чата<br>* /mute - блокировка чата игрока<br>* /unmute - снятие блокировки чата у игрока<br>* /jail - посадить игрока<br>* /unjail - выпустить игрока<br>* /kick - кикнуть игрока<br>* /tp - телепорт к игроку<br>* /time - управление временем<br>* /near - список игроков рядом с вами<br>* /skull - получить свою голову<br>* /lagg - очистить весь дроп<br>* /seemoney - смотреть деньги другого игрока<br>* /size - изменить размер своего скина<br>* /top - телепорт в облака<br>* /gm - смена игрового режима (креатив/выживание)<br>* /god - режим бога<br>* /repair - бесплатная починка предмета в руке<br>* /ptime - изменить время для себя<br>* /premium - получить премиум набор<br>* /clear - очистить свой инвентарь<br>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Доступ к регионам других игроков<br>* Префикс [Консоль] в чате и над головой<br>* Возможность создать 4 приватa по 4000 блоков<br>* Вход на заполненный сервер<br>* Сохранение вещей после смерти с шансом в 50%<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#16" aria-expanded="true" aria-controls="16">
+                                Бог — 1699 рублей
+                            </button>
+                            <div id="16" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>* /givefly - дать флай другу<br>* /spec - режим наблюдения<br>* /console - слежка за вводом команд игроков<br>* /nearby - просмотр игроков рядом с другим игроком<br>* /whois - узнать информацию об игроке<br>* /fire - поджечь игрока<br>* //pos1, //pos2, //set - изменение местности<br>* /prefix - поменять себе [Префикс]<br>* /ag - режим анти грифера (доступ к приватам)<br>* /cape - надеть плащ<br>* /warn - выдать предупреждение<br>* /heal - вылечить другого игрока<br>* /vanishlist - посмотреть список игроков в режиме невидимости<br>* /pumpkin - надеть тыкву на голову<br>* /skull - получить голову другого игрока<br>* /v - режим невидимости<br>* /say - написать сообщение на весь сервер<br>* /ban - блокировка игрока<br>* /pardon - разбан игрока<br>* /clearchat - очистка чата<br>* /mute - блокировка чата игрока<br>* /unmute - снятие блокировки чата у игрока<br>* /jail - посадить игрока<br>* /unjail - выпустить игрока<br>* /kick - кикнуть игрока<br>* /tp - телепорт к игроку<br>* /time - управление временем<br>* /near - список игроков рядом с вами<br>* /skull - получить свою голову<br>* /lagg - очистить весь дроп<br>* /seemoney - смотреть деньги другого игрока<br>* /size - изменить размер своего скина<br>* /top - телепорт в облака<br>* /gm - смена игрового режима (креатив/выживание)<br>* /god - режим бога<br>* /repair - бесплатная починка предмета в руке<br>* /ptime - изменить время для себя<br>* /premium - получить премиум набор<br>* /clear - очистить свой инвентарь<br>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Доступ к регионам других игроков<br>* Префикс [Бог] в чате и над головой<br>* Возможность создать 4 приватa по 5000 блоков<br>* Вход на заполненный сервер<br>* Сохранение вещей после смерти с шансом в 50%<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#17" aria-expanded="true" aria-controls="17">
+                                Властелин — 2499 рублей
+                            </button>
+                            <div id="17" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <center style="text-align: left;"><center style="text-align: left;"><center style="text-align: left;"><center style="text-align: left;"><center style="text-align: left;">* /fakeop - выдать ложные права оператора</center><center style="text-align: left;">* /fakedeop - забрать ложные права оператора</center><center style="text-align: left;">* /fakepay - ложно выдать денег игроку</center><center style="text-align: left;">* /pumpkin - одеть тыкву на голову другого игрока</center><center style="text-align: left;">* /launch - подбросить игрока</center><center style="text-align: left;">* /freeze - заморозить игрока</center><center style="text-align: left;">* /unfreeze - разморозить игрока</center><center style="text-align: left;">* /flood - зафлудить чат игроку</center><center style="text-align: left;">* /spawn - отправить игрока на спавн</center><center style="text-align: left;">* /givefly - дать флай другу</center><center style="text-align: left;">* /spec - наблюдение за игроком</center><center style="text-align: left;">* /console - слежка за вводом команд игроков</center><center style="text-align: left;">* /nearby - просмотр игроков рядом с другим игроком</center><center style="text-align: left;">* /whois - узнать информацию об игроке</center><center style="text-align: left;">* /fire - поджечь игрока</center><center style="text-align: left;">* //pos1, //pos2, //set - изменение местности</center><center style="text-align: left;">* /prefix - поменять себе [Префикс]</center><center style="text-align: left;">* /ag - режим анти грифера (доступ к приватам)</center><center style="text-align: left;">* /cape - надеть плащ</center><center style="text-align: left;">* /warn - выдать предупреждение</center><center style="text-align: left;">* /heal - вылечить другого игрока</center><center style="text-align: left;">* /vanishlist - посмотреть список игроков в режиме невидимости</center><center style="text-align: left;">* /pumpkin - надеть тыкву на голову</center><center style="text-align: left;">* /skull - получить голову другого игрока</center><center style="text-align: left;">* /v - режим невидимости</center><center style="text-align: left;">* /say - написать сообщение на весь сервер</center><center style="text-align: left;">* /ban - блокировка игрока</center><center style="text-align: left;">* /pardon - разбан игрока</center><center style="text-align: left;">* /clearchat - очистка чата</center><center style="text-align: left;">* /mute - блокировка чата игрока</center><center style="text-align: left;">* /unmute - снятие блокировки чата у игрока</center><center style="text-align: left;">* /jail - посадить игрока</center><center style="text-align: left;">* /unjail - выпустить игрока</center><center style="text-align: left;">* /kick - кикнуть игрока</center><center style="text-align: left;">* /tp - телепорт к игроку</center><center style="text-align: left;">* /time - управление временем</center><center style="text-align: left;">* /near - список игроков рядом с вами</center><center style="text-align: left;">* /skull - получить свою голову</center><center style="text-align: left;">* /lagg - очистить весь дроп</center><center style="text-align: left;">* /seemoney - смотреть деньги другого игрока</center><center style="text-align: left;">* /size - изменить размер своего скина</center><center style="text-align: left;">* /top - телепорт в облака</center><center style="text-align: left;">* /gm - смена игрового режима (креатив/выживание)</center><center style="text-align: left;">* /god - режим бога</center><center style="text-align: left;">* /repair - бесплатная починка предмета в руке</center><center style="text-align: left;">* /ptime - изменить время для себя</center><center style="text-align: left;">* /premium - получить премиум набор</center><center style="text-align: left;">* /clear - очистить свой инвентарь</center><center style="text-align: left;">* /heal - вылечить себя</center><center style="text-align: left;">* /vip - получить вип набор</center><center style="text-align: left;">* /back - вернуться на место смерти</center><center style="text-align: left;">* /xyz - узнать свои координаты</center><center style="text-align: left;">* /jm - изменить сообщение при входе на сервер</center><center style="text-align: left;">* /fly - режим полёта</center><center style="text-align: left;">* Доступ к регионам других игроков</center><center style="text-align: left;">* Префикс [Властелин] в чате и над головой</center><center style="text-align: left;">* Возможность создать 4 приватa по 6000 блоков</center><center style="text-align: left;">* Вход на заполненный сервер</center><center style="text-align: left;">* Сохранение вещей после смерти с шансом в 50%</center><center style="text-align: left;">&gt; Остаётся после вайпа!</center></center></center></center></center>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#18" aria-expanded="true" aria-controls="18">
+                                Легенда — 3499 рублей
+                            </button>
+                            <div id="18" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <center style="text-align: left;"><center style="text-align: left;"><center style="text-align: left;">* /rainbow - управление радужной бронёй</center><center style="text-align: left;">* /invsee - посмотреть инвентарь другого игрока</center><center style="text-align: left;">* /god - выдать режим бога</center><center style="text-align: left;">* /fakeop - выдать ложные права оператора</center><center style="text-align: left;">* /fakedeop - забрать ложные права оператора</center><center style="text-align: left;">* /fakepay - ложно выдать денег игроку</center><center style="text-align: left;">* /pumpkin - одеть тыкву на голову другого игрока</center><center style="text-align: left;">* /launch - подбросить игрока</center><center style="text-align: left;">* /freeze - заморозить игрока</center><center style="text-align: left;">* /unfreeze - разморозить игрока</center><center style="text-align: left;">* /flood - зафлудить чат игроку</center><center style="text-align: left;">* /spawn - отправить игрока на спавн</center><center style="text-align: left;">* /givefly - дать флай другу</center><center style="text-align: left;">* /spec - наблюдение за игроком</center><center style="text-align: left;">* /console - слежка за вводом команд игроков</center><center style="text-align: left;">* /nearby - просмотр игроков рядом с другим игроком</center><center style="text-align: left;">* /whois - узнать информацию об игроке</center><center style="text-align: left;">* /fire - поджечь игрока</center><center style="text-align: left;">* //pos1, //pos2, //set - изменение местности</center><center style="text-align: left;">* /prefix - поменять себе [Префикс]</center><center style="text-align: left;">* /ag - режим анти грифера (доступ к приватам)</center><center style="text-align: left;">* /cape - надеть плащ</center><center style="text-align: left;">* /warn - выдать предупреждение</center><center style="text-align: left;">* /heal - вылечить другого игрока</center><center style="text-align: left;">* /vanishlist - посмотреть список игроков в режиме невидимости</center><center style="text-align: left;">* /pumpkin - надеть тыкву на голову</center><center style="text-align: left;">* /skull - получить голову другого игрока</center><center style="text-align: left;">* /v - режим невидимости</center><center style="text-align: left;">* /say - написать сообщение на весь сервер</center><center style="text-align: left;">* /ban - блокировка игрока</center><center style="text-align: left;">* /pardon - разбан игрока</center><center style="text-align: left;">* /clearchat - очистка чата</center><center style="text-align: left;">* /mute - блокировка чата игрока</center><center style="text-align: left;">* /unmute - снятие блокировки чата у игрока</center><center style="text-align: left;">* /jail - посадить игрока</center><center style="text-align: left;">* /unjail - выпустить игрока</center><center style="text-align: left;">* /kick - кикнуть игрока</center><center style="text-align: left;">* /tp - телепорт к игроку</center><center style="text-align: left;">* /time - управление временем</center><center style="text-align: left;">* /near - список игроков рядом с вами</center><center style="text-align: left;">* /skull - получить свою голову</center><center style="text-align: left;">* /lagg - очистить весь дроп</center><center style="text-align: left;">* /seemoney - смотреть деньги другого игрока</center><center style="text-align: left;">* /size - изменить размер своего скина</center><center style="text-align: left;">* /top - телепорт в облака</center><center style="text-align: left;">* /gm - смена игрового режима (креатив/выживание)</center><center style="text-align: left;">* /god - режим бога</center><center style="text-align: left;">* /repair - бесплатная починка предмета в руке</center><center style="text-align: left;">* /ptime - изменить время для себя</center><center style="text-align: left;">* /premium - получить премиум набор</center><center style="text-align: left;">* /clear - очистить свой инвентарь</center><center style="text-align: left;">* /heal - вылечить себя</center><center style="text-align: left;">* /vip - получить вип набор</center><center style="text-align: left;">* /back - вернуться на место смерти</center><center style="text-align: left;">* /xyz - узнать свои координаты</center><center style="text-align: left;">* /jm - изменить сообщение при входе на сервер</center><center style="text-align: left;">* /fly - режим полёта</center><center style="text-align: left;">* Доступ к регионам других игроков</center><center style="text-align: left;">* Префикс [Легенда] в чате и над головой</center><center style="text-align: left;">* Возможность создать 5 приватов по 7000 блоков</center><center style="text-align: left;">* Вход на заполненный сервер</center><center style="text-align: left;">* Сохранение вещей после смерти с шансом в 50%</center><center style="text-align: left;">&gt; Остаётся после вайпа!</center></center></center>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#19" aria-expanded="true" aria-controls="19">
+                                Спонсор — 4999 рублей
+                            </button>
+                            <div id="19" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <center style="text-align: left;"><center style="text-align: left;"><center style="text-align: left;">* /local - прослушка всего локального чата</center><center style="text-align: left;">* /rainbow - управление радужной бронёй</center><center style="text-align: left;">* /invsee - посмотреть инвентарь другого игрока</center><center style="text-align: left;">* /god- выдать режим бога</center><center style="text-align: left;">* /fakeop - выдать ложные права оператора</center><center style="text-align: left;">* /fakedeop - забрать ложные права оператора</center><center style="text-align: left;">* /fakepay - ложно выдать денег игроку</center><center style="text-align: left;">* /pumpkin - одеть тыкву на голову другого игрока</center><center style="text-align: left;">* /launch - подбросить игрока</center><center style="text-align: left;">* /freeze - заморозить игрока</center><center style="text-align: left;">* /unfreeze - разморозить игрока</center><center style="text-align: left;">* /flood - зафлудить чат игроку</center><center style="text-align: left;">* /spawn - отправить игрока на спавн</center><center style="text-align: left;">* /givefly - дать флай другу</center><center style="text-align: left;">* /spec - наблюдение за игроком</center><center style="text-align: left;">* /console - слежка за вводом команд игроков</center><center style="text-align: left;">* /nearby - просмотр игроков рядом с другим игроком</center><center style="text-align: left;">* /whois - узнать информацию об игроке</center><center style="text-align: left;">* /fire - поджечь игрока</center><center style="text-align: left;">* //pos1, //pos2, //set - изменение местности</center><center style="text-align: left;">* /prefix - поменять себе [Префикс]</center><center style="text-align: left;">* /ag - режим анти грифера (доступ к приватам)</center><center style="text-align: left;">* /cape - надеть плащ</center><center style="text-align: left;">* /warn - выдать предупреждение</center><center style="text-align: left;">* /heal - вылечить другого игрока</center><center style="text-align: left;">* /vanishlist - посмотреть список игроков в режиме невидимости</center><center style="text-align: left;">* /pumpkin - надеть тыкву на голову</center><center style="text-align: left;">* /skull - получить голову другого игрока</center><center style="text-align: left;">* /v - режим невидимости</center><center style="text-align: left;">* /say - написать сообщение на весь сервер</center><center style="text-align: left;">* /ban - блокировка игрока</center><center style="text-align: left;">* /pardon - разбан игрока</center><center style="text-align: left;">* /clearchat - очистка чата</center><center style="text-align: left;">* /mute - блокировка чата игрока</center><center style="text-align: left;">* /unmute - снятие блокировки чата у игрока</center><center style="text-align: left;">* /jail - посадить игрока</center><center style="text-align: left;">* /unjail - выпустить игрока</center><center style="text-align: left;">* /kick - кикнуть игрока</center><center style="text-align: left;">* /tp - телепорт к игроку</center><center style="text-align: left;">* /time - управление временем</center><center style="text-align: left;">* /near - список игроков рядом с вами</center><center style="text-align: left;">* /skull - получить свою голову</center><center style="text-align: left;">* /lagg - очистить весь дроп</center><center style="text-align: left;">* /seemoney - смотреть деньги другого игрока</center><center style="text-align: left;">* /size - изменить размер своего скина</center><center style="text-align: left;">* /top - телепорт в облака</center><center style="text-align: left;">* /gm - смена игрового режима (креатив/выживание)</center><center style="text-align: left;">* /god - режим бога</center><center style="text-align: left;">* /repair - бесплатная починка предмета в руке</center><center style="text-align: left;">* /ptime - изменить время для себя</center><center style="text-align: left;">* /premium - получить премиум набор</center><center style="text-align: left;">* /clear - очистить свой инвентарь</center><center style="text-align: left;">* /heal - вылечить себя</center><center style="text-align: left;">* /vip - получить вип набор</center><center style="text-align: left;">* /back - вернуться на место смерти</center><center style="text-align: left;">* /xyz - узнать свои координаты</center><center style="text-align: left;">* /jm - изменить сообщение при входе на сервер</center><center style="text-align: left;">* /fly - режим полёта</center><center style="text-align: left;">* Доступ к регионам других игроков</center><center style="text-align: left;">* Префикс [Спонсор] в чате и над головой</center><center style="text-align: left;">* Возможность создать 6 приватов по 8000 блоков</center><center style="text-align: left;">* Вход на заполненный сервер</center><center style="text-align: left;">* Сохранение вещей после смерти с шансом в 50%</center><center style="text-align: left;">&gt; Остаётся после вайпа!</center></center></center>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#20" aria-expanded="true" aria-controls="20">
+                                Титан — 8999 рублей
+                            </button>
+                            <div id="20" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p><strong>Самый крутой донат на сервере!</strong><br>* /panel - уникальная панель с большим количеством возможностей<br>* /local - прослушать весь локальный чат<br>* /rainbow - управление радужной бронёй<br>* /invsee - посмотреть инвентарь другого игрока<br>* /god- выдать режим бога<br>* /fakeop - выдать ложные права оператора<br>* /fakedeop - забрать ложные права оператора<br>* /fakepay - ложно выдать денег игроку<br>* /pumpkin - одеть тыкву на голову другого игрока<br>* /launch - подбросить игрока<br>* /freeze - заморозить игрока<br>* /unfreeze - разморозить игрока<br>* /flood - зафлудить чат игроку<br>* /spawn - отправить игрока на спавн<br>* /givefly - дать флай другу<br>* /spec - наблюдение за игроком<br>* /console - слежка за вводом команд игроков<br>* /nearby - просмотр игроков рядом с другим игроком<br>* /whois - узнать информацию об игроке<br>* /fire - поджечь игрока<br>* //pos1, //pos2, //set - изменение местности<br>* /prefix - поменять себе [Префикс]<br>* /ag - режим анти грифера (доступ к приватам)<br>* /cape - надеть плащ<br>* /warn - выдать предупреждение<br>* /heal - вылечить другого игрока<br>* /pumpkin - надеть тыкву на голову<br>* /skull - получить голову другого игрока<br>* /v - режим невидимости<br>* /say - написать сообщение на весь сервер<br>* /ban - блокировка игрока<br>* /pardon - разбан игрока<br>* /clearchat - очистка чата<br>* /mute - блокировка чата игрока<br>* /unmute - снятие блокировки чата у игрока<br>* /jail - посадить игрока<br>* /unjail - выпустить игрока<br>* /kick - кикнуть игрока<br>* /tp - телепорт к игроку<br>* /time - управление временем<br>* /near - список игроков рядом с вами<br>* /skull - получить свою голову<br>* /lagg - очистить весь дроп<br>* /seemoney - смотреть деньги другого игрока<br>* /size - изменить размер своего скина<br>* /top - телепорт в облака<br>* /gm - смена игрового режима (креатив/выживание)<br>* /god - режим бога<br>* /repair - бесплатная починка предмета в руке<br>* /ptime - изменить время для себя<br>* /premium - получить премиум набор<br>* /clear - очистить свой инвентарь<br>* /heal - вылечить себя<br>* /vip - получить вип набор<br>* /back - вернуться на место смерти<br>* /xyz - узнать свои координаты<br>* /jm - изменить сообщение при входе на сервер<br>* /fly - режим полёта<br>* Доступ к регионам других игроков<br>* Префикс [Титан] в чате и над головой<br>* Возможность создать 7 регионов по 10000 блоков<br>* Самый крутой донат на сервере!<br>&gt; Остаётся после вайпа!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#2" aria-expanded="true" aria-controls="2">
+                                1 Донат-Кейс — 59 рублей
+                            </button>
+                            <div id="2" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>1 донат кейс, открыть кейс: /warp case<br>из кейса может выпасть: флай, вип, премиум, креатив, лорд, ультра, хелпер и модератор<br>вы не сможете открыть кейс если у вас привилегия хелпер и выше!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#21" aria-expanded="true" aria-controls="21">
+                                2 Донат-Кейса — 99 рублей
+                            </button>
+                            <div id="21" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>2 донат кейса, открыть кейс: /warp case<br>из кейса может выпасть: флай, вип, премиум, креатив, лорд, ультра, хелпер и модератор<br>вы не сможете открыть кейс если у вас привилегия хелпер и выше!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#22" aria-expanded="true" aria-controls="22">
+                                3 Донат-Кейса — 149 рублей
+                            </button>
+                            <div id="22" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>3 донат кейса, открыть кейс: /warp case<br>из кейса может выпасть: флай, вип, премиум, креатив, лорд, ультра, хелпер и модератор<br>вы не сможете открыть кейс если у вас привилегия хелпер и выше!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#23" aria-expanded="true" aria-controls="23">
+                                4 Донат-Кейса — 199 рублей
+                            </button>
+                            <div id="23" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>4 донат кейса, открыть кейс: /warp case</p><p>из кейса может выпасть: флай, вип, премиум, креатив, лорд, ультра, хелпер и модератор</p><p>вы не сможете открыть кейс если у вас привилегия хелпер и выше!</p>
+                            </div>
+                        </div>
+                                                <div class="card">
+                            <button class="grey collapsed" type="button" data-toggle="collapse" data-target="#24" aria-expanded="true" aria-controls="24">
+                                5 Донат-Кейсов — 249 рублей
+                            </button>
+                            <div id="24" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>5 донат кейсов, открыть кейс: /warp case</p><p>из кейса может выпасть: флай, вип, премиум, креатив, лорд, ультра, хелпер и модератор</p><p>вы не сможете открыть кейс если у вас привилегия хелпер и выше!</p>
+                            </div>
+                        </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-5 rightBlock">
             <div class="block block3D">
+                <h1>Мониторинг сервера</h1>
+                <div class="content">
+                    <div class="server block3D align-items-center">
+                        <img class="logo" src="/templates/styles/img/logo.png">
+                        <div class="info">
+                            <b id="ip">pe.VineMine.net:19132</b> Сейчас  играет <span>570</span> игроков
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button onclick="window.location.href = 'minecraft://?addExternalServer=« §l§bVine§cMine§r§f »|pe.VineMine.net:19132';">Добавить сервер</button>
+                        <button class="dark" id="copy" data-clipboard-text="pe.VineMine.net:19132"><img src="/templates/styles/img/copy.svg"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="block block3D">
+                <h1>Последние покупки</h1>
                 <div class="content users">
-<div class="user block3D align-items-center">
-<img src="face.php/?name=<?=$data['buyer']['username'];?>" alt="<?=$data['buyer']['username'];?>" class="logo">
-<div class="tick"><img src="/img/tick.svg"></div>
-<div class="info">
-<b><?=$data['buyer']['username'];?></b>
-<p>Купил <span><?=$data['name'];?></span></p>
-<p><?=date(' d.m в H:i', $data['buyer']['time']);?></p>
-</div>
-</div>                                   
-</div>
+                                        <div class="user block3D align-items-center">
+                        <img class="logo" src="/img/skin.png">
+                        <div class="tick"><img src="/templates/styles/img/tick.svg"></div>
+                        <div class="info">
+                            <b><a href="https://megamine.ru/">MegaMine.ru</b></a>
+                            <p>Купил <span>скрипт</span></p>
+                        </div>
+                    </div>
+                 </div>
             </div>
         </div>
     </div>
@@ -658,40 +378,7 @@ echo "<p style='color:red;'>ВЫКЛЮЧЕН</p>";
     }
 </style>
     <footer>
-
-        <center>2019-2020 &copy; (MCraft) | <?=$data['links']['footer'];?></center>
-<center><!-- begin WebMoney Transfer : accept label -->
-<a href="https://www.megastock.com/" target="_blank"><img src="/assets/img/88x31_wm_blue.png" alt="www.megastock.com" border="0"/></a>
-<!-- end WebMoney Transfer : accept label -->	
-<!-- begin WebMoney Transfer : attestation label --> <a href="https://passport.web.money/asp/certview.asp?wmid=468961531157" target=_blank><IMG SRC="/assets/img/v_white_on_transp_ru.png" title="Здесь находится аттестат нашего WM идентификатора 468961531157" border="0"></a> 
-<!-- end WebMoney Transfer : attestation label --></center>
-<center style="visibility: hidden;"><!--LiveInternet counter--><script type="text/javascript">
-document.write('<a href="//www.liveinternet.ru/click" '+
-'target="_blank"><img src="//counter.yadro.ru/hit?t14.6;r'+
-escape(document.referrer)+((typeof(screen)=='undefined')?'':
-';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
-screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
-';h'+escape(document.title.substring(0,150))+';'+Math.random()+
-'" alt="" title="LiveInternet: показано число просмотров за 24'+
-' часа, посетителей за 24 часа и за сегодня" '+
-'border="0" width="88" height="31"><\/a>')
-</script><!--/LiveInternet--></center>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(57662461, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/57662461" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+        <center>VineMine (<a href="https://mcraft.pw/">mcraft.pw</a>) | <a href="#" target="_blank">Соглашение</a></center>
     </footer><br>
 </body>
-
 </html>
