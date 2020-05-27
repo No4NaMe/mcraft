@@ -145,7 +145,7 @@
                                             <div class="step">
 <div class="user block3D align-items-center">
 <img src="face.php/?name=<?=$data['buyer']['username'];?>" alt="<?=$data['buyer']['username'];?>" class="logo">
-<div class="tick"><img src="/assets/img/tick.svg"></div>
+<div class="tick"><img src="/img/tick.svg"></div>
 <div class="info">
 <b><?=$data['buyer']['username'];?></b>
 <p>Купил <span><?=$data['name'];?></span></p>
@@ -211,10 +211,435 @@
     <div class="row">
         <div class="col-12 col-lg-7 mainBlock">
 <?php echo MessageShow(); ?>
-<?=$data['content'];?>
+<form action="payment.php" method="POST" id="server<?=$data['i'];?>" class="block row justify-content-center" data-toggle="validator" data-delay="200"  autocomplete="off">
+<div class="content">
+<h1>Покупка доната</h1>
+<!-- Раскоментировать для двух и более серверов. Добавить в форму выше стиль style="display: none;"-->
+<!-- <p id="selectMenu">
+<button type="button" onclick="selectMenu();" class="red">
+<i class="icon arrow-left"></i> Вернуться к выбору сервера
+</button>
+</p>-->
+<input type="text" id="username" name="username" placeholder="Никнейм" pattern="^<?=U_REGEXP;?>$" maxlength="20" minlength="3" required>
+<select id="selid" name="selid" required>
+<option selected disabled>Выберите товар</option>
+<?=$data['goods'];?>
+</select>
+<input type="hidden" name="server" value="<?=$data['i'];?>">
+<select style="display: none;" id="merchant" name="merchant">
+<?=$data['merchants'];?>
+</select>
+</div>
+<div class="footer row justify-content-center">
+<div class="content">
+<button class="red" type="submit" name="dosubm">КУПИТЬ</button>
+<div class="text">Нажимая на кнопку, вы соглашаетесь
+<br>с <a href="/rules" target="_blank">правилами сервера</a></div><br>
+</div>
+</div>
+</form>
+            
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#1" aria-expanded="true" aria-controls="1">
+Флай — 9<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="1" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/afk</span> — режим вдали от клавиатуры</li>
+<li><span style="color:white;">/kit fly</span> — набор Флая</li>
+<li><span style="color:white;">/fly</span> — режим полета</li>
+<li><span style="color:white;">/clear</span> — очистить инвентарь</li>
+<li>Префикс <b style="color:#30d3ff;">[ФЛАЙ]</b> в чате и над головой</li>
+<li>вход на полный сервер</li>
+<li>доступ к донат чату</li>
+<li>2 региона, по 2500 блоков.</li>
+<li>+ Возможности: Игрок</li>
+</ul>
+</div>
+</div>
+<!-- Конец описания привилегии -->
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#2" aria-expanded="true" aria-controls="2">
+Вип — 29<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="2" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/clo /cos</span> — Вип одежда</li>
+<li><span style="color:white;">/heal</span> — вылечить себя</li>
+<li><span style="color:white;">/kit vip</span> — получить вип набор</li>
+<li><span style="color:white;">/back</span> — вернуться на место смерти</li>
+<li>Префикс <b style="color:#30d3ff;">[ВИП]</b> в чате и над головой</li>
+<li>3 региона, по 2500 блоков.</li>
+<li>+ Возможности: Игрок, Флай</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#3" aria-expanded="true" aria-controls="3">
+Премиум — 49<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="3" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/god</span> — режим бога</li>
+<li><span style="color:white;">/repair</span> — бесплатная починка предмета в руке</li>
+<li><span style="color:white;">/ptime</span> — изменить время для себя</li>
+<li><span style="color:white;">/kit premium</span> — получить премиум набор</li>
+<li>Префикс <b style="color:#ff3088;">[ПРЕМИУМ]</b> в чате и над головой</li>
+<li>4 региона, по 2500 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#4" aria-expanded="true" aria-controls="4">
+Креатив — 99<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="4" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/gm</span> — смена игрового режима (креатив/выживание)</li>
+<li><span style="color:white;">/top</span> — телепорт в облака</li>
+<li>Префикс <b style="color:#ff3088;">[КРЕАТИВ]</b> в чате и над головой</li>
+<li>5 регионов, по 2800 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип, Премиум</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#5" aria-expanded="true" aria-controls="5">
+Лорд — 149<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="5" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/seemoney</span> — смотреть деньги другого игрока</li>
+<li><span style="color:white;">/size</span> — изменить размер своего скина</li>
+<li><span style="color:white;">/extinguish</span> — потушиться</li>
+<li>Префикс <b style="color:#ff3088;">[ЛОРД]</b> в чате и над головой</li>
+<li>5 регионов, по 3000 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#6" aria-expanded="true" aria-controls="6">
+Ультра — 199<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="6" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/near</span> — список игроков рядом с вами</li>
+<li><span style="color:white;">/hat</span> — получить супер шляпу</li>
+<li><span style="color:white;">/playerhead</span> — получить свою голову</li>
+<li>Префикс <b style="color:#ff3088;">[УЛЬТРА]</b> в чате и над головой</li>
+<li>6 регионов, по 3000 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#7" aria-expanded="true" aria-controls="7">
+Хелпер — 249<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="7" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/kick</span> — кикнуть игрока</li>
+<li><span style="color:white;">/tp</span> — телепорт к игроку</li>
+<li><span style="color:white;">/time</span> — управление временем</li>
+<li>Префикс <b style="color:#3dff30;">[ХЕЛПЕР]</b> в чате и над головой</li>
+<li>6 регионов, по 3200 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#8" aria-expanded="true" aria-controls="8">
+Модератор — 349<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="8" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/heal</span> — вылечить другого игрока</li>
+<li><span style="color:white;">/clo</span> — надеть крылья</li>
+<li><span style="color:white;">/clearchat</span> — очистка чата</li>
+<li><span style="color:white;">/mufflechat</span> — блокировка чата игрока</li>
+<li><span style="color:white;">/unmuffle</span> — снятие блокировки чата у игрока</li>
+<li><span style="color:white;">/jail</span> — посадить игрока</li>
+<li><span style="color:white;">/unjail</span> — выпустить игрока</li>
+<li>Префикс <b style="color:#ffb130;">[МОДЕРАТОР]</b> в чате и над головой</li>
+<li>7 регионов, по 3200 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#9" aria-expanded="true" aria-controls="9">
+Админ — 449<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="9" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/clan</span> — Возможность создавать кланы</li>
+<li><span style="color:white;">/warn</span> — выдать предупреждение</li>
+<li><span style="color:white;">/ban</span> — блокировка игрока</li>
+<li><span style="color:white;">/pardon</span> — разбан игрока</li>
+<li>Префикс <b style="color:#ffb130;">[АДМИН]</b> в чате и над головой</li>
+<li>7 регионов, по 3500 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#10" aria-expanded="true" aria-controls="10">
+Оператор — 599<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="10" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/playerhead</span> — получить голову другого игрока</li>
+<li><span style="color:white;">/v</span> — режим невидимости</li>
+<li><span style="color:white;">/say</span> — написать сообщение на весь сервер</li>
+<li>Префикс <b style="color:#3dff30;">[ОПЕРАТОР]</b> в чате и над головой</li>
+<li>7 регионов, по 4000 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор, Админ</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#11" aria-expanded="true" aria-controls="11">
+Анти-Грифер — 899<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="11" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/near</span> — просмотр игроков рядом с другим игроком</li>
+<li><span style="color:white;">/whois</span> — узнать информацию об игроке</li>
+<li><span style="color:white;">/burn</span> — поджечь игрока</li>
+<li><span style="color:white;">//pos1, //pos2, //set</span> — изменение местности</li>
+<li><span style="color:white;">/setprefix</span> — поменять себе [Префикс]</li>
+<li><span style="color:white;">/rg</span> — Полный доступ к приватам</li>
+<li>Префикс <b style="color:#3dff30;">[АНТИ-ГРИФЕР]</b> в чате и над головой</li>
+<li>8 регионов, по 4000 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор, Админ, Оператор</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#12" aria-expanded="true" aria-controls="12">
+Консоль — 1199<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="12" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li>слежка за вводом команд игроков и все что происходит в консоли</li>
+<li>Префикс <b style="color:#3dff30;">[КОНСОЛЬ]</b> в чате и над головой</li>
+<li>8 регионов, по 4500 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор, Админ, Оператор, Анти-Грифер</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#13" aria-expanded="true" aria-controls="13">
+Бог — 1699<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="13" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/fly</span> — выдать режим флая</li>
+<li>Префикс <b style="color:#3dff30;">[БОГ]</b> в чате и над головой</li>
+<li>8 регионов, по 5000 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор, Админ, Оператор, Анти-Грифер, Консоль</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#14" aria-expanded="true" aria-controls="14">
+Властелин — 2499<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="14" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/lightning</span> — ударить игрока молнией</li>
+<li><span style="color:white;">/seen</span> — Посмотреть последнее сыгранное время игрока</li>
+<li><span style="color:white;">/spawn</span> — отправить игрока на спавн</li>
+<li>Префикс <b style="color:#ff30f9;">[ВЛАСТЕЛИН]</b> в чате и над головой</li>
+<li>8 регионов, по 6000 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор, Админ, Оператор, Анти-Грифер, Консоль, Бог</li>
+</ul>
+</div>
+</div>
+
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#15" aria-expanded="true" aria-controls="15">
+Спонсор — 3999<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="15" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li>Префикс <b style="color:red;">[СПОНСОР]</b> в чате и над головой</li>
+<li><span style="color:white;">/lc</span> — выдать режим бога</li>
+<li><span style="color:white;">/god</span> — выдать режим бога</li>
+<li>9 регионов, по 10 000 блоков.</li>
+<li>+ Возможности: Игрок, Флай, Вип, Премиум, Креатив, Лорд, Ультра, Хелпер, Модератор, Админ, Оператор, Анти-Грифер, Консоль, Бог, Властелин</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#16" aria-expanded="true" aria-controls="16">
+1 Донат-Кейс — 59<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="16" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/warp case</span> — Открыть донат кейс</li>
+<li>из кейса может выпасть:</li>
+<li>флай</li>
+<li>вип</li>
+<li>премиум</li>
+<li>креатив</li>
+<li>лорд</li>
+<li>ультра</li>
+<li>хелпер</li>
+<li>модератор</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#17" aria-expanded="true" aria-controls="17">
+2 Донат-Кейса — 99<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="17" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/warp case</span> — Открыть донат кейс</li>
+<li>из кейса может выпасть:</li>
+<li>флай</li>
+<li>вип</li>
+<li>премиум</li>
+<li>креатив</li>
+<li>лорд</li>
+<li>ультра</li>
+<li>хелпер</li>
+<li>модератор</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#18" aria-expanded="true" aria-controls="18">
+3 Донат-Кейса — 149<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="18" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/warp case</span> — Открыть донат кейс</li>
+<li>из кейса может выпасть:</li>
+<li>флай</li>
+<li>вип</li>
+<li>премиум</li>
+<li>креатив</li>
+<li>лорд</li>
+<li>ультра</li>
+<li>хелпер</li>
+<li>модератор</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#19" aria-expanded="true" aria-controls="19">
+4 Донат-Кейса — 199<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="19" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/warp case</span> — Открыть донат кейс</li>
+<li>из кейса может выпасть:</li>
+<li>флай</li>
+<li>вип</li>
+<li>премиум</li>
+<li>креатив</li>
+<li>лорд</li>
+<li>ультра</li>
+<li>хелпер</li>
+<li>модератор</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<button class="grey collapsed" type="button" data-toggle="collapse" data-target="#20" aria-expanded="true" aria-controls="20">
+5 Донат-Кейсов — 249<i class="fa fa-rub" aria-hidden="true" style="color:#02eed2;"></i>
+</button>
+<div id="20" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+<ul>
+<li><span style="color:white;">/warp case</span> — Открыть донат кейс</li>
+<li>из кейса может выпасть:</li>
+<li>флай</li>
+<li>вип</li>
+<li>премиум</li>
+<li>креатив</li>
+<li>лорд</li>
+<li>ультра</li>
+<li>хелпер</li>
+<li>модератор</li>
+</ul>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+<!-- block monitoring -->
+<div class="col-12 col-lg-5 rightBlock">
+<div class="block block3D">
+<h1>Мониторинг сервера</h1>
+<div class="content">
+<?php for ($i = 0; $i < count($config['servers']); $i++) { ?>
+<div class="server block3D align-items-center">
+<img class="logo" src="./assets/img/logo.png">
+<div class="info">
+<b id="ip"><?php echo $config['servers'][$i]['host']; ?>:<?php echo $config['servers'][$i]['port']; ?></b>
+<?php if (isset($config['servers'][$i]['showMonitoring']) && $config['servers'][$i]['showMonitoring'] === true) { ?> Сейчас  играет 
+<?php
+$str = file_get_contents ('https://megamine.ru/api.php?ip='.$config['servers'][$i]['host'].'&port='.$config['servers'][$i]['port'].'');
+$playersonline = json_decode( $str );
+echo "<span>";
+echo $playersonline->players->now;
+echo "</span> игроков";
+?>
+<?
+$fp = @fsockopen ("".$config['servers'][$i]['host']."","".$config['servers'][$i]['port']."",$errno,$errstr,1);
+if ($fp)
+echo "<p style='color:green;'>ВКЛЮЧЁН</p>";
+else
+echo "<p style='color:red;'>ВЫКЛЮЧЕН</p>"; 
+?>
+<?php } ?>
+</div>
+</div>
+<div class="buttons">
+<button onclick="window.location.href = 'minecraft://?addExternalServer=« §l§bM§cCraft§r§f »|<?php echo $config['servers'][$i]['host']; ?>:<?php echo $config['servers'][$i]['port']; ?>';">Добавить сервер</button>
+<button class="dark" id="copy" data-clipboard-text="<?php echo $config['servers'][$i]['host']; ?>:<?php echo $config['servers'][$i]['port']; ?>"><img src="./assets/img/copy.svg"></button>
+</div>
+<?php } ?>
+</div>
+</div>
+<!-- end block monitoring -->
             <div class="block block3D">
                 <div class="content users">
-<?=$data['lastBuyers'];?>                                    
+<div class="user block3D align-items-center">
+<img src="face.php/?name=<?=$data['buyer']['username'];?>" alt="<?=$data['buyer']['username'];?>" class="logo">
+<div class="tick"><img src="/img/tick.svg"></div>
+<div class="info">
+<b><?=$data['buyer']['username'];?></b>
+<p>Купил <span><?=$data['name'];?></span></p>
+<p><?=date(' d.m в H:i', $data['buyer']['time']);?></p>
+</div>
+</div>                                   
 </div>
             </div>
         </div>
