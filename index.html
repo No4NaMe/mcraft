@@ -9,75 +9,24 @@
     <meta name="description" content="MegaMine - это сервер Minecraft Pocket Edition">
     <meta name="keywords" content="megamine, megaminepe, донат, купить донат, майнкрафт сервер, майнкрафт пе сервер, mcpe, pocket edition, игровой сервер, скачать minecraft pe, сервер mcraft, pe.megamine.ru, megamine.ru, игровой сервер, minecraft, автодонат, играть mcpe, мониторинг mcpe, сервера майнкрафт пе">
     <title><?php echo $config['main']['site_name']; ?></title>
-    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/png">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/png">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/jquery.formstyler.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
-    <script src="./assets/js/jquery-3.3.1.min.js"></script>
-    <script src="./assets/js/megamine.js"></script>
-    <script src="./assets/js/jquery.copy-to-clipboard.js"></script>
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/snow.js"></script>
-    <script src="./assets/js/jquery.validate.min.js"></script>
-<script>
-$(document).ready(function(){
-    $('.openPopup').on('click',function(){
-        var dataURL = $(this).attr('data-toggle');
-        $('.modal-body').load(dataURL,function(){
-            $('#myModal').modal({show:true});
-        });
-    }); 
-});
-</script>
-<script>
-$('.openBtn').on('click',function()
-{
-    $('.modal-body').load('page.php?mod=page&id=1','page.php?mod=page&id=2','page.php?mod=page&id=3','page.php?mod=page&id=4','page.php?mod=page&id=5','page.php?mod=page&id=6',function(){
-        $('#myModal').modal({show:true});
-    });
-});
-</script>
-	<script type="text/javascript">
-	var servers = parseInt('<?=count($config['servers']);?>');
-	var serverID = 0;
-
-	function selectServer(servID)
-	{
-		$('.server-select').hide(400);
-		$('#server' + servID).show(400);
-		serverID = servID;
-	}
-	function selectMenu()
-	{
-		$('#server' + serverID).hide(400);
-		$('.server-select').show(400);
-	}
-	$(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-        <!-- Раскоментировать для двух и более серверов -->
-        <!-- $('select').styler(); -->
-
-        $('form.server').validator();
-
-		if (servers === 1)
-		{
-			$('#selectMenu').hide(400);
-			$('#server0').show(400);
-		}
-		else
-		{
-			$('.server-select').show(400);
-		}
-	});
-	</script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/jquery.formstyler.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/megamine.js"></script>
+    <script src="/js/jquery.copy-to-clipboard.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/snow.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
 </head>
 
 <body>
     <div class="sidenav" id="sidenav_mobile">
-        <img src="./assets/img/close.svg" id="sidenav_mobile_close">
+        <img src="/img/close.svg" id="sidenav_mobile_close">
                     <?=$data['links']['header'];?>
 <a href="#modal_contacts" data-toggle="modal">Контакты</a>
     </div>
@@ -86,11 +35,11 @@ $('.openBtn').on('click',function()
         <div class="navbar-light navbar-expand-lg2">
         <div class="container">
             <div class="header-content d-block d-lg-flex align-items-center">
-                <div class="block3D d-inline-block d-lg-none d-xl-none openMenu" id="sidenav_mobile_toggle"><img src="./assets/img/menu.svg">
+                <div class="block3D d-inline-block d-lg-none d-xl-none openMenu" id="sidenav_mobile_toggle"><img src="/img/menu.svg">
                 </div>
                 <a href="/">
-                    <img class="logo d-none d-lg-inline d-md-none" src="./assets/img/logo.png">
-                    <img class="logo d-inline d-lg-none d-md-inline" src="./assets/img/logo-m.png">
+                    <img class="logo d-none d-lg-inline d-md-none" src="/img/logo.png">
+                    <img class="logo d-inline d-lg-none d-md-inline" src="/img/logo-m.png">
                 </a>
                 <span class="menu d-none d-lg-inline d-md-none">
                     <?=$data['links']['header'];?>
@@ -100,7 +49,7 @@ $('.openBtn').on('click',function()
                 </span>
                     <button class="start_game block3D d-none d-lg-inline-block" data-toggle="modal" data-target="#modal_start_game">Начать играть</button>
                     <button class="start_game_mobile block3D d-block d-lg-none" data-toggle="modal" data-target="#modal_start_game">
-                        <div class="img block3D"><img src="./assets/img/play.svg"></div>
+                        <div class="img block3D"><img src="/img/play.svg"></div>
                         Начать играть
                     </button>
                             </div>
@@ -119,7 +68,7 @@ $('.openBtn').on('click',function()
                     <div class="col-12 col-lg-10">
                         <div class="modal-content contacts_modal">
                             <button type="button" class="close" data-dismiss="modal">
-                                <img src="./assets/img/close.svg">
+                                <img src="/img/close.svg">
                             </button>
                             <div class="row justify-content-center">
                                 <div class="col-11 col-lg-10">
@@ -127,7 +76,7 @@ $('.openBtn').on('click',function()
                                     <div class="steps row">
                                         <div class="col-12 col-lg-6">
                                             <div class="step">
-                                                <div class="img vk"><img src="./assets/img/vk.svg"></div>
+                                                <div class="img vk"><img src="/img/vk.svg"></div>
                                                 <span>
                                                 <p>Быстро ответим</p>
                                                 <a href="//vk.me/megam1ne">ВКонтакте</a>
@@ -136,7 +85,7 @@ $('.openBtn').on('click',function()
                                         </div>
                                         <div class="col-12 col-lg-6">
                                             <div class="step">
-                                                <div class="img mail"><img src="./assets/img/mail.svg"></div>
+                                                <div class="img mail"><img src="/img/mail.svg"></div>
                                                 <span>
                                                 <p>Пишите нам на</p>
                                                 <a href="mailto:admin@megamine.ru">admin@megamine.ru</a>
@@ -159,7 +108,7 @@ $('.openBtn').on('click',function()
                     <div class="col-12 col-lg-10">
                         <div class="modal-content" id="result">
                             <button type="button" class="close" data-dismiss="modal">
-                                <img src="./assets/img/close.svg">
+                                <img src="/img/close.svg">
                             </button>
                             <div class="row justify-content-center">
                                 <div class="col-11 col-lg-10">
@@ -185,7 +134,7 @@ $('.openBtn').on('click',function()
                     <div class="col-12 col-lg-10">
                         <div class="modal-content contacts_modal">
                             <button type="button" class="close" data-dismiss="modal">
-                                <img src="./assets/img/close.svg">
+                                <img src="/img/close.svg">
                             </button>
                             <div class="row justify-content-center">
                                 <div class="col-11 col-lg-10">
@@ -213,7 +162,7 @@ $('.openBtn').on('click',function()
                     <div class="col-12 col-lg-10">
                         <div class="modal-content start_game_modal">
                             <button type="button" class="close" data-dismiss="modal">
-                                <img src="./assets/img/close.svg">
+                                <img src="/img/close.svg">
                             </button>
                             <div class="row justify-content-center">
                                 <div class="col-11 col-lg-10">
@@ -229,7 +178,7 @@ $('.openBtn').on('click',function()
                                         <div class="step">Нажмите кнопку “Серверы”, а затем “Добавить сервер”</div>
                                         <div class="step no-flex">
                                             <span>Заполните форму, как показано на фотографии</span>
-                                            <div><img src="./assets/img/how_play.png" style="width: 80%;"></div>
+                                            <div><img src="/img/how_play.png" style="width: 80%;"></div>
                                         </div>
                                         <div class="step">Нажмите кнопку “Сохранить” и выберите сервер в списке серверов</div>
                                         <div class="step">Готово! Удачной игры!</div>
