@@ -8,7 +8,7 @@
     <meta name="author" content="webmcpe">
     <meta name="description" content="MegaMine - это сервер Minecraft Pocket Edition">
     <meta name="keywords" content="megamine, megaminepe, донат, купить донат, майнкрафт сервер, майнкрафт пе сервер, mcpe, pocket edition, игровой сервер, скачать minecraft pe, сервер mcraft, pe.megamine.ru, megamine.ru, игровой сервер, minecraft, автодонат, играть mcpe, мониторинг mcpe, сервера майнкрафт пе">
-    <title><?php echo $config['main']['site_name']; ?></title>
+    <title>MCraft.pw - Система электронной коммерции для серверов Minecraft.</title>
     <link rel="shortcut icon" href="/img/logo.png" type="image/png">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
@@ -143,7 +143,15 @@
                                     <div class="steps row">
                                         <div class="col-12 col-lg-12">
                                             <div class="step">
-<?=($data['hideAdvert'] === true) ? false : $data['advert'];?>
+<div class="user block3D align-items-center">
+<img src="face.php/?name=<?=$data['buyer']['username'];?>" alt="<?=$data['buyer']['username'];?>" class="logo">
+<div class="tick"><img src="/assets/img/tick.svg"></div>
+<div class="info">
+<b><?=$data['buyer']['username'];?></b>
+<p>Купил <span><?=$data['name'];?></span></p>
+<p><?=date(' d.m в H:i', $data['buyer']['time']);?></p>
+</div>
+</div>
                                             </div>
                                         </div>
                                     </div>
